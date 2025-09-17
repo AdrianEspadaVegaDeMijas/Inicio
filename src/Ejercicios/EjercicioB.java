@@ -10,14 +10,15 @@ public class EjercicioB {
         System.out.println("Introduzca la base imponible: ");
         double bImponible = sc.nextDouble();
 
-        Scanner.nextLine(); //limpiar buffer
+        sc.nextLine(); //limpiar buffer
+        
         System.out.println("Introduzca el tipo de IVA (general, reducido o superreducido): ");
         String tipoIva = sc.nextLine();
 
-        System.out.println("Introduzca el ódigo promocional (nopro, mitad, meno5 o 5porc): ");
+        System.out.println("Introduzca el código promocional (nopro, mitad, meno5 o 5porc): ");
         String codigoPromo = sc.nextLine();
 
-        System.out.println("Base imponible: " + nImponible)
+        System.out.println("Base imponible: " + bImponible);
         
         switch (tipoIva) {
             case "general":
