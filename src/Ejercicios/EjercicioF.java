@@ -12,6 +12,7 @@ public class EjercicioF {
         
         Scanner sc = new Scanner(System.in);
 
+        //Hash map para pasar de letra a numero y viceversa
         HashMap<Integer, String> letras = new HashMap<>();
         letras.put(1, "a");
         letras.put(2, "b");
@@ -21,7 +22,6 @@ public class EjercicioF {
         letras.put(6, "f");
         letras.put(7, "g");
         letras.put(8, "h");
-
 
         HashMap<String, Integer> numeros = new HashMap<>();
         numeros.put("a", 1);

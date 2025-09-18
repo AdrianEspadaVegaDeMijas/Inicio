@@ -8,6 +8,7 @@ public class EjercicioE {
      
         Scanner sc = new Scanner(System.in);
 
+        //preguntar altura de la piramide
         System.out.println("Dime la altura de la piramide (NUMERO ENTERO MAYOR QUE 3): ");
         int n = sc.nextInt();
 

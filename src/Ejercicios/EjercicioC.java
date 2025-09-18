@@ -18,8 +18,6 @@ public class EjercicioC {
             System.out.println("Dime un numero, si es negativo saldras del bucle:");
             numero = sc.nextInt();
 
-            
-
             if(numero % 2 != 0 && numero >= 0) {
                 imp++;
                 total++;
