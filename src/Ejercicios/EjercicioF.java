@@ -1,7 +1,9 @@
 package Ejercicios;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 
 public class EjercicioF {
@@ -36,6 +38,7 @@ public class EjercicioF {
 
         //Lista de movimientos
         String[] mov = new String[0];
+        List<String> mov1 = new ArrayList<>();
 
         for(int i = 1; i <= 8; i++){
            
@@ -45,7 +48,7 @@ public class EjercicioF {
             //columna del alfil en numero
             int columna = 0;
             for(int j = 1; j <= 8; j++){
-                if(letras.get(j) == String.valueOf(posicion.charAt(0))) {
+                if(letras.get(j).equals(String.valueOf(posicion.charAt(0)))) {
                     columna = numeros.get(String.valueOf(posicion.charAt(0)));;
                 }
             }
@@ -66,11 +69,16 @@ public class EjercicioF {
 
 
 
+
                 //Ariva Izquierda
                 if(filaArriba <= 8 && columnaIzquierda >= 1) {
 
-                    mov = Arrays.copyOf(mov, mov.length + 1);
-                    mov[mov.length - 1] = letras.get(columnaIzquierda) + String.valueOf(filaArriba);
+                    /*mov = Arrays.copyOf(mov, mov.length + 1);
+                    mov[mov.length - 1] = letras.get(columnaIzquierda) + String.valueOf(filaArriba);*/
+
+                    if(mov1.contains(mov1)==false) {
+                        mov1.add(letras.get(columnaIzquierda) + String.valueOf(filaArriba));
+                    }
 
 
                 }
@@ -78,42 +86,55 @@ public class EjercicioF {
                 //Arriba Derecha
                 if(filaArriba <= 8 && columnaDerecha <= 8) {
 
-                    mov = Arrays.copyOf(mov, mov.length + 1);
+                   /*mov = Arrays.copyOf(mov, mov.length + 1);
                     mov[mov.length - 1] = letras.get(columnaDerecha) + String.valueOf(filaArriba);
+*/
+                    if(mov1.contains(mov1)==false) {
+                        mov1.add(letras.get(columnaDerecha) + String.valueOf(filaArriba));
+                    }
 
                 }
 
                 //Abajo Izquierda
                 if(filaAbajo <= 8 && columnaIzquierda >= 1) {
 
-                    mov = Arrays.copyOf(mov, mov.length + 1);
+                   /*  mov = Arrays.copyOf(mov, mov.length + 1);
                     mov[mov.length - 1] = letras.get(columnaIzquierda) + String.valueOf(filaAbajo);
-
+*/
+                    if(mov1.contains(mov1)==false) {
+                        mov1.add(letras.get(columnaIzquierda) + String.valueOf(filaAbajo));
+                    }
 
                 }
 
                 //Abajo Derecha
                 if(filaAbajo <= 8 && columnaDerecha <= 8) {
 
-                    mov = Arrays.copyOf(mov, mov.length + 1);
+                    /*mov = Arrays.copyOf(mov, mov.length + 1);
                     mov[mov.length - 1] = letras.get(columnaDerecha) + String.valueOf(filaAbajo);
+*/
+                    if(mov1.contains(mov1)==false) {
+                        mov1.add(letras.get(columnaDerecha) + String.valueOf(filaAbajo));
+                    }
 
                 }
 
                 //movimientos del alfil
-                filaArriba = fila - 1;
-                filaAbajo = fila + 1;
-                columnaIzquierda = columna - 1;
-                columnaDerecha = columna + 1;  
+                filaArriba = filaArriba - 1;
+                filaAbajo = filaAbajo + 1;
+                columnaIzquierda = columnaIzquierda - 1;
+                columnaDerecha = columnaDerecha + 1;  
             
             }
 
         }
 
         System.out.println("El alfil puede moverse a las siguientes posiciones: ");
+        System.out.println(Arrays.toString(mov1.toArray()));
+/* 
         System.out.println(Arrays.toString(mov));
 
-         
+         */
 
             
 
