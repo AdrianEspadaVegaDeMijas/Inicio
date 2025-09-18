@@ -61,7 +61,7 @@ public class EjercicioB {
 
         System.out.printf("Total: %.2f\n", bImponible);
 
-
+        
     }
 
 }
