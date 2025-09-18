@@ -40,7 +40,6 @@ public class EjercicioF {
         String[] mov = new String[0];
         List<String> mov1 = new ArrayList<>();
 
-        for(int i = 1; i <= 8; i++){
            
             //fila del alfil en numero
             int fila = Integer.parseInt(String.valueOf(posicion.charAt(1)));
@@ -87,8 +86,7 @@ public class EjercicioF {
                 if(filaArriba <= 8 && columnaDerecha <= 8) {
 
                    /*mov = Arrays.copyOf(mov, mov.length + 1);
-                    mov[mov.length - 1] = letras.get(columnaDerecha) + String.valueOf(filaArriba);
-*/
+                    mov[mov.length - 1] = letras.get(columnaDerecha) + String.valueOf(filaArriba);*/
                     if(mov1.contains(mov1)==false) {
                         mov1.add(letras.get(columnaDerecha) + String.valueOf(filaArriba));
                     }
@@ -99,8 +97,7 @@ public class EjercicioF {
                 if(filaAbajo <= 8 && columnaIzquierda >= 1) {
 
                    /*  mov = Arrays.copyOf(mov, mov.length + 1);
-                    mov[mov.length - 1] = letras.get(columnaIzquierda) + String.valueOf(filaAbajo);
-*/
+                    mov[mov.length - 1] = letras.get(columnaIzquierda) + String.valueOf(filaAbajo);*/
                     if(mov1.contains(mov1)==false) {
                         mov1.add(letras.get(columnaIzquierda) + String.valueOf(filaAbajo));
                     }
@@ -111,8 +108,7 @@ public class EjercicioF {
                 if(filaAbajo <= 8 && columnaDerecha <= 8) {
 
                     /*mov = Arrays.copyOf(mov, mov.length + 1);
-                    mov[mov.length - 1] = letras.get(columnaDerecha) + String.valueOf(filaAbajo);
-*/
+                    mov[mov.length - 1] = letras.get(columnaDerecha) + String.valueOf(filaAbajo);*/
                     if(mov1.contains(mov1)==false) {
                         mov1.add(letras.get(columnaDerecha) + String.valueOf(filaAbajo));
                     }
@@ -127,7 +123,7 @@ public class EjercicioF {
             
             }
 
-        }
+
 
         System.out.println("El alfil puede moverse a las siguientes posiciones: ");
         System.out.println(Arrays.toString(mov1.toArray()));
