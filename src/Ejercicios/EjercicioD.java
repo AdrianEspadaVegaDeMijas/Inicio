@@ -9,14 +9,17 @@ public class EjercicioD {
         
         Scanner sc = new Scanner(System.in);
 
+        //Pide un numero
         System.out.println("Dime un numero: ");
         int numero = sc.nextInt();
 
+        //Pide un digito
         System.out.println("Dime un dígito y te dire la posicion de este en el numero anterior:");
         int digito = sc.nextInt();
 
         String numeroStr = Integer.toString(numero);
 
+        //Recorre el numero y busca el digito
         for(int i = 0; i < numeroStr.length(); i++) {
             if(numeroStr.charAt(i) == Integer.toString(digito).charAt(0)) {
                 
